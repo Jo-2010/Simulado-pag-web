@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal da Academia Estelar</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/e/e2/United_States_Space_Command_emblem_2019.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@525&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <style>
+:root{
+    --cor-de-fundo: rgb(112, 112, 255);
+    --fonte-titulos: 'Orbitron', sans-serif;
+    --fonte-textos: 'Open Sans', sans-serif;
+    --borda-imagens-e-fundo-botao: rgb(23, 23, 177);
+    --borda-painel: black;
+    --cor-de-fundo-painel: greenyellow;
+}
+html, body{
+    height: 100%;
+    background-color: var(--cor-de-fundo);
+}
+h1, h2{
+    font-family: var(--fonte-titulos);
+}
+p, li, pre{
+    font-family: var(--fonte-textos);
+}
+.container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    width: 100%;
+    grid-gap: 5px;
+}
+.imgAstronauta{
+    height: 270px;
+    margin-top: 5px;
+    border: 5px solid var(--borda-imagens-e-fundo-botao);
+    border-radius: 5px;
+}
+.apresentacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 3px solid var(--borda-painel);
+    background-color: var(--cor-de-fundo-painel);
+    grid-area: apresentacao;
+}
+.cabecalho{
+    display: flex;
+    font-size: 25px;
+    flex-direction: column;
+    border: 3px solid var(--borda-painel);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-de-fundo-painel);
+}
+.alinharItensLista{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 30px;
+    list-style: none;
+}
+.corpo-principal{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 5px;
+    width: 100%;
+    grid-template-areas: 
+    'apresentacao paineis'
+    ;
+}
+.rodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    border: 3px solid var(--borda-painel);
+    background-color: var(--cor-de-fundo-painel);
+}
+.paineis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    grid-area: paineis;
+}
+*{
+    box-sizing: border-box;
+}
+.painel{
+    border: 3px solid var(--borda-painel);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--cor-de-fundo-painel);
+}
+.imgEngenharia{
+    height: 150px;
+    border: 5px solid var(--borda-imagens-e-fundo-botao);
+    border-radius: 5px;
+}
+.imgComando{
+    height: 150px;
+    border: 5px solid var(--borda-imagens-e-fundo-botao);
+    border-radius: 5px;
+}
+.imgCiencias{
+    height: 150px;
+    border: 5px solid var(--borda-imagens-e-fundo-botao);
+    border-radius: 5px;
+}
+.divBotao{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background-color:  var(--borda-imagens-e-fundo-botao);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: var(--fonte-textos);
+}
+.mensagemInscricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.invisivel{
+    display: none;
+}
+.apresentacao p {
+  max-width: 700px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+@media (max-width: 768px){
+    .corpo-principal{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'apresentacao'
+        'paineis'
+        ;
+    }
+    .apresentacao{
+        margin-bottom: 30px;
+    }
+    .container{
+        grid-gap: 10px;
+    }
+    .paineis{
+        margin-bottom: 30px;
+    }
+    .alinharItensLista{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .espacarCelular{
+        padding: 2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="cabecalho">
+            <h1>Academia Estelar</h1>
+            <ul class="alinharItensLista">
+                <li class="espacarCelular"><a href="#">Início</a></li>
+                <li class="espacarCelular"><a href="#">Setores</a></li>
+                <li class="espacarCelular"><a href="#">Contato</a></li>
+            </ul>
+        </header>
+        <main class="corpo-principal">
+            <div class="apresentacao">
+                <h1>Apresentação da academia estelar</h1>
+                <br><br>
+                <img src="https://cdn.pixabay.com/photo/2020/04/23/03/53/astronaut-5080937_1280.jpg" alt="Astronauta no espaço" class="imgAstronauta">
+                <br><br>
+                <p>Bem-vindo à Academia Estelar, o berço dos futuros exploradores do universo! Aqui, cada cadete é treinado para enfrentar os desafios do espaço sideral, desenvolvendo disciplina, coragem e curiosidade científica.
+                <br><br>
+                Nossa missão é formar líderes capazes de comandar frotas interplanetárias, engenheiros prontos para construir tecnologias revolucionárias e cientistas que desvendam os segredos mais profundos das galáxias.
+                <br><br>
+                Ao ingressar na Academia, você passa a fazer parte de uma tradição de excelência que inspira gerações a olharem para as estrelas com determinação e esperança. Prepare-se para viver uma jornada que unirá conhecimento, técnica e o desejo eterno de explorar o desconhecido!
+                <br><br>
+                A formação na Academia Estelar vai além das fronteiras da sala de aula. Nossos cadetes vivenciam simulações de voo, treinamentos de sobrevivência em planetas inóspitos e missões colaborativas que testam a capacidade de liderança e a união entre tripulações. Cada desafio é uma oportunidade de aprender que, no espaço, o verdadeiro poder está na cooperação e na confiança mútua.
+                <br><br>
+                Inspirados pelas grandes descobertas da humanidade, os instrutores da Academia dedicam-se a despertar o potencial de cada aluno. Combinando ciência, ética e coragem, nossos cadetes tornam-se pioneiros de uma nova era de exploração — uma geração que não teme o desconhecido, mas o encara como o próximo passo natural rumo às estrelas.</p>
+            </div>
+            <div class="paineis">
+                <h2>Setores da academia:</h2>
+                <div class="painel">
+                    <h2>Comando</h2>
+                    <img src="https://media.defense.gov/2025/Apr/11/2003688056/1920/1080/0/250410-N-TP834-6140.JPG" alt="comando Painel foto" class="imgComando">
+                    <p>O setor de Comando treina cadetes para liderar missões espaciais, tomar decisões estratégicas e coordenar equipes em situações críticas. Aqui, a disciplina e a liderança são essenciais para o sucesso de qualquer expedição.</p>
+                </div>
+                <div class="painel">
+                    <h2>Engenharia</h2>
+                    <img src="https://www.freethink.com/wp-content/uploads/2024/02/space-robots.jpg?resize=1200%2C630" alt="engenharia Painel foto" class="imgEngenharia">
+                    <p>O setor de Engenharia prepara cadetes para construir, reparar e otimizar tecnologias espaciais. Eles aprendem sobre robótica, naves espaciais, sistemas de propulsão e manutenção de equipamentos avançados.</p>
+                </div>
+                <div class="painel">
+                    <h2>Ciências</h2>
+                    <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/missions/webb/science/2025/webb-All_boxes_Pandora_midband-6K.jpg?crop=faces%2Cfocalpoint&fit=clip&h=4482&w=5981" alt="ciencias Painel foto" class="imgCiencias">
+                    <p>O setor de Ciências foca em pesquisas espaciais, estudos de planetas, estrelas e fenômenos cósmicos. Cadetes desenvolvem habilidades de observação, análise de dados e experimentação científica de ponta.</p>
+                </div>
+            </div>
+        </main>
+        <div class="divBotao"><pre>Clique no botão ao lado para realizar sua inscrição: </pre> <button onclick="inscrito();">Inscrever-se</button>
+        </div>
+        <div class="invisivel" id="divMensagem">
+            <p id="usuarioInscrito"></p>
+            <p>Agora, digite seu nome abaixo, cadete novo:</p>
+            <input type="text" id="nome">
+            <br>
+            <button onclick="mostrarNome();">Enviar</button>
+            <p id="mensagemNome"></p>
+        </div>
+        <footer class="rodape"><p>© 2025 Academia Estelar - Todos os direitos reservados.</p></footer>
+    </div>
+    <script>
+alert("Bem-vindo(a) ao Portal da Academia Estelar!");
+function inscrito(){
+    let divMensagem = document.getElementById("divMensagem");
+    let mensagemParagrafo = document.getElementById("usuarioInscrito");
+    divMensagem.className = "mensagemInscricao";
+    mensagemParagrafo.innerText = "Inscrição registrada com sucesso, cadete!";
+}
+function mostrarNome(){
+    let nomeUsuario = document.getElementById("nome").value;
+    let paragrafoComNome = document.getElementById("mensagemNome");
+    paragrafoComNome.innerText = "Inscrição registrada com sucesso, Cadete " + nomeUsuario + ".";
+}
+    </script>
+</body>
+</html>
