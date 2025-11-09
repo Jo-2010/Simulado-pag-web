@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@525&family=Orbitron:wght@600&display=swap" rel="stylesheet">
     <style>
 :root{
-    --cor-de-fundo-e-fundo-botao-secao: rgb(112, 112, 255);
+    --cor-de-fundo: rgb(112, 112, 255);
+    --fundo-botao-secao: rgb(175, 175, 255);
     --fonte-titulos: 'Orbitron', sans-serif;
     --fonte-textos: 'Open Sans', sans-serif;
     --borda-imagens-e-fundo-botao: rgb(23, 23, 177);
@@ -20,21 +21,21 @@
 }
 html, body{
     height: 100%;
-    background-color: var(--cor-de-fundo-e-fundo-botao-secao);
+    background-color: var(--cor-de-fundo);
 }
 h1, h2{
     font-family: var(--fonte-titulos);
 }
 .cabecalho > h1{
     font-size: 1.7em;
-}        
+}
 p, li, pre{
     font-family: var(--fonte-textos);
 }
 a{
     text-decoration: none;
     color: var(--borda-painel-e-cor-letra-secao);
-    background-color: var(--cor-de-fundo-e-fundo-botao-secao);
+    background-color: var(--fundo-botao-secao);
     border: 2px solid var(--borda-painel-e-cor-letra-secao);
     border-radius: 5px;
     padding: 0.1rem;
@@ -277,5 +278,3 @@ function mostrarNome(){
     </script>
 </body>
 </html>
-
-
